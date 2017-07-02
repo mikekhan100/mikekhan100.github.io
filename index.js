@@ -5,5 +5,5 @@ function selectMeal() {
     }
     
     var text = document.getElementById("textArea");
-    text.textContent = ranNum;
+    text.textContent = mealsArray[0];
 }
