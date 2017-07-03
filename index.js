@@ -8,5 +8,5 @@ function selectMeal() {
     text.textContent = mealsArray[ranNum];*/
 
     var text = document.getElementById("textArea");
-    text.textContent = ranNum.value;
+    text.textContent = ranNum;
 }
