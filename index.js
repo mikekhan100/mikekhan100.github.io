@@ -4,6 +4,9 @@ function selectMeal() {
       return Math.floor(Math.random() * (mealsArray.length));
     }
     
+   /* var text = document.getElementById("textArea");
+    text.textContent = mealsArray[ranNum];*/
+
     var text = document.getElementById("textArea");
-    text.textContent = mealsArray[ranNum];
+    text.textContent = ranNum;
 }
