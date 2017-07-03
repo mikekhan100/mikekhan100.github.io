@@ -5,5 +5,5 @@ function selectMeal() {
     }
     
     var text = document.getElementById("textArea");
-    text.textContent = mealsArray[0];
+    text.textContent = mealsArray[1];
 }
