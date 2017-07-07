@@ -8,6 +8,7 @@
   </head>
     
   <body>
+	<!-- NavBar -->  
   	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -32,14 +33,16 @@
 		</div>
 	</nav>
 
+	<!-- Jumbotron -->
 	<div class="container">
 		<div class="jumbotron">
     		<h1>Meal Selector</h1>
     		<h2>No more having to think of meals - just press the button to generate a random meal, if you don't like it - press the button again...</h2>
     	</div>
 		
+	<!-- Dropdown Menu -->
 	<div class="dropdown">
-  		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  		<button class="btn btn-lg btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     			Dropdown button
   		</button>
   		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -48,7 +51,8 @@
     		<a class="dropdown-item" href="#">Something else here</a>
   		</div>
 	</div>
-		
+	
+	<!-- TextArea (where meals appear) and button -->
     	<div class="center-block">
     		<h1 id="textArea">Meals go here</h1>
 		<button onclick="selectMeal()" class="btn btn-lg">Choose a meal</button>
