@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Times Tables App</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+    
+  <body>
+	<!-- NavBar -->  
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+      		</button>
+				<a href="#" class="navbar-brand">Times Tables</a>
+			</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Sign Up</a></li>
+						<li><a href="#">Login</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+
+	<!-- Jumbotron -->
+	<div class="container">
+		<div class="jumbotron">
+    		<h1>Times Tables</h1>
+		<h2>2 Times Tables</h2>
+    	</div>
+		
+	<!-- Times Table -->
+	<div id="answerLine">
+		<form>
+  			2 x 1 = 
+		        <input type="number" value="1">
+			<input type="submit" value="Submit">
+		</form>
+	
+	<!-- TextArea (where answer appears) -->
+    		<h2 id="answerArea"></h2>
+	</div>
+	 	  
+    	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="bootstrap.js"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
