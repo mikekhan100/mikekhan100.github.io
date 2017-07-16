@@ -3,8 +3,9 @@ function calculate() {
    var currentValue = document.getElementById("multiple").value;
    var answer = document.getElementById("answerArea");
    
-   
-        answer.textContent = currentValue;
+        if(currentValue == 2) {
+            answer.textContent = "Correct";
+        }
    
     
    /*else {
