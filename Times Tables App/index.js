@@ -1,9 +1,8 @@
-function selectMeal() {
-    var mealsArray = ['T-bone Steak', 'Curry', 'Pizza', 'Roast Dinner', 'Spaghetti Bolognese', 'Chicken Pasta', 'Stir Fry', 'Sausage and Mash'];
-    var ranNum = Math.floor(Math.random() * (mealsArray.length));
+function calculate() {
     
+    var currentValue = document.getElementById("multiple");
     
-    var text = document.getElementById("textArea");
-    text.textContent = mealsArray[ranNum];
+    var answer = document.getElementById("answerArea");
+    answer.textContent = currentValue;
 
 }
