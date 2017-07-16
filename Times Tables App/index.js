@@ -10,3 +10,4 @@ function calculate() {
    else {
        answer.textContent = "Please try again";
    }
+}
