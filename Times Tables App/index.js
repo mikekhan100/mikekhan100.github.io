@@ -1,6 +1,6 @@
 function calculate() {
     
-   var currentValue = document.getElementById("multiple").value;
+   var currentValue = document.getElementById("multiple");
    var answer = document.getElementById("answerArea");
    
    if (currentValue === "2") {
