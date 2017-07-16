@@ -1,8 +1,12 @@
 function calculate() {
     
    var currentValue = document.getElementById("multiple").value;
+   var answer = document.getElementById("answerArea");
    
    if (currentValue === 2) {
-        var answer = document.getElementById("answerArea");
         answer.textContent = "Correct";
+   }
+    
+   else {
+       answer.textContent = "Please try again";
    }
