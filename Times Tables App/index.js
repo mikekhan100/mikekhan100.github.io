@@ -1,8 +1,11 @@
 function calculate() {
     
-    var currentValue = document.getElementById("multiple");
+   /* var currentValue = document.getElementById("multiple");
+   */
     
     var answer = document.getElementById("answerArea");
-    answer.textContent = currentValue;
+    answer.textContent = "2";
+    
+  
 
 }
