@@ -1,3 +1,5 @@
+var prize = 0;
+
 function calculate1() {
     
    var currentValue = document.getElementById("input1").value;
@@ -5,6 +7,7 @@ function calculate1() {
    
    if(currentValue == 2) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -18,6 +21,7 @@ function calculate2() {
    
    if(currentValue == 4) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -31,6 +35,7 @@ function calculate3() {
    
    if(currentValue == 6) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -44,6 +49,7 @@ function calculate4() {
    
    if(currentValue == 8) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -57,6 +63,7 @@ function calculate5() {
    
    if(currentValue == 10) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -70,6 +77,7 @@ function calculate6() {
    
    if(currentValue == 12) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -83,6 +91,7 @@ function calculate7() {
    
    if(currentValue == 14) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -96,6 +105,7 @@ function calculate8() {
    
    if(currentValue == 16) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -109,6 +119,7 @@ function calculate9() {
    
    if(currentValue == 18) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -122,6 +133,7 @@ function calculate10() {
    
    if(currentValue == 20) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -135,6 +147,7 @@ function calculate11() {
    
    if(currentValue == 22) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
@@ -148,8 +161,13 @@ function calculate12() {
    
    if(currentValue == 24) {
         answer.textContent = "Correct";
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
    }
+}
+
+if (prize === 12) {
+    
 }
