@@ -23,10 +23,12 @@ function calculate2() {
    
    if(currentValue == 4) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
        
    }
 }
@@ -38,10 +40,12 @@ function calculate3() {
    
    if(currentValue == 6) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -52,10 +56,12 @@ function calculate4() {
    
    if(currentValue == 8) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -66,10 +72,12 @@ function calculate5() {
    
    if(currentValue == 10) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -80,10 +88,12 @@ function calculate6() {
    
    if(currentValue == 12) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -94,10 +104,12 @@ function calculate7() {
    
    if(currentValue == 14) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -108,10 +120,12 @@ function calculate8() {
    
    if(currentValue == 16) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -122,10 +136,12 @@ function calculate9() {
    
    if(currentValue == 18) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -136,10 +152,12 @@ function calculate10() {
    
    if(currentValue == 20) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -150,10 +168,12 @@ function calculate11() {
    
    if(currentValue == 22) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -164,10 +184,12 @@ function calculate12() {
    
    if(currentValue == 24) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
