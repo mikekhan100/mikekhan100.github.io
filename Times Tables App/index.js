@@ -7,10 +7,12 @@ function calculate1() {
    
    if(currentValue == 2) {
         answer.textContent = "Correct";
+        answer.style.color = "#00ffb6";
         prize++;
    }
    else {
        answer.textContent = "Please try again";
+       answer.style.color = "#ff007f";
    }
 }
 
@@ -25,6 +27,7 @@ function calculate2() {
    }
    else {
        answer.textContent = "Please try again";
+       
    }
 }
 
