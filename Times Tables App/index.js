@@ -193,8 +193,8 @@ function calculate12() {
    }
 }
 
-var prize = document.getElementById("pic");
-prize.style.color = "blue";
+var result = document.getElementById("pic");
+result.style.color = "blue";
 if (prize === 12) {
-    answer.style.color = "crimson";
+    result.style.color = "crimson";
 }
