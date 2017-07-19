@@ -194,5 +194,6 @@ function calculate12() {
 }
 
 if (prize === 12) {
-    
+    var answer = document.getElementById("pic");
+    answer.style.color = "crimson";
 }
