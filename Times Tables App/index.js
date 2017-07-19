@@ -1,3 +1,5 @@
+function whole() {
+
 var prize = 0;
 
 function calculate1() {
@@ -197,4 +199,5 @@ var result = document.getElementById("pic");
 result.style.color = "blue";
 if (prize === 12) {
     result.textContent = "Get in!!!";
+    }
 }
