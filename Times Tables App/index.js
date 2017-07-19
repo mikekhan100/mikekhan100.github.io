@@ -196,5 +196,5 @@ function calculate12() {
 var result = document.getElementById("pic");
 result.style.color = "blue";
 if (prize === 12) {
-    result.textContent = prize;
+    result.textContent = "Get in!!!";
 }
