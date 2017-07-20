@@ -1,4 +1,4 @@
-function whole {
+function whole() {
 
 
 var prize = 0;
