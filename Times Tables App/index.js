@@ -1,7 +1,19 @@
-function whole() {
+function whole {
+
 
 var prize = 0;
 
+// If button is clicked, calculate whether the answer is correct and print it out
+
+var currentValue = document.getElementById("input1").value;
+var answer = document.getElementById("answer1");
+if (currentValue == 2) {
+  answer.textContent = "True";
+  prize++;
+  document.getElementById("test") = prize;
+}
+
+/*
 function calculate1() {
     
    var currentValue = document.getElementById("input1").value;
@@ -9,12 +21,10 @@ function calculate1() {
    
    if(currentValue == 2) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -25,13 +35,10 @@ function calculate2() {
    
    if(currentValue == 4) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
-       
    }
 }
 
@@ -42,12 +49,10 @@ function calculate3() {
    
    if(currentValue == 6) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -58,12 +63,10 @@ function calculate4() {
    
    if(currentValue == 8) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -74,12 +77,10 @@ function calculate5() {
    
    if(currentValue == 10) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -90,12 +91,10 @@ function calculate6() {
    
    if(currentValue == 12) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -106,12 +105,10 @@ function calculate7() {
    
    if(currentValue == 14) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -122,12 +119,10 @@ function calculate8() {
    
    if(currentValue == 16) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -138,12 +133,10 @@ function calculate9() {
    
    if(currentValue == 18) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -154,12 +147,10 @@ function calculate10() {
    
    if(currentValue == 20) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -170,12 +161,10 @@ function calculate11() {
    
    if(currentValue == 22) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
@@ -186,18 +175,15 @@ function calculate12() {
    
    if(currentValue == 24) {
         answer.textContent = "Correct";
-        answer.style.color = "#00ffb6";
-        prize += 1;
+        prize++;
    }
    else {
        answer.textContent = "Please try again";
-       answer.style.color = "#ff007f";
    }
 }
 
-var result = document.getElementById("pic");
-result.style.color = "blue";
 if (prize === 12) {
-    result.textContent = "Get in!!!";
-    }
+    
+}
+*/
 }
