@@ -10,7 +10,8 @@ var answer = document.getElementById("answer1");
   if (currentValue == 2) {
     answer.textContent = "True";
     prize++;
-    document.getElementById("test") = prize;
+    var result = document.getElementById("test");
+    result.textContent = prize;
   }
 }
 
