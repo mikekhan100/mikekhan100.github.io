@@ -7,10 +7,11 @@ var prize = 0;
 
 var currentValue = document.getElementById("input1").value;
 var answer = document.getElementById("answer1");
-if (currentValue == 2) {
-  answer.textContent = "True";
-  prize++;
-  document.getElementById("test") = prize;
+  if (currentValue == 2) {
+    answer.textContent = "True";
+    prize++;
+    document.getElementById("test") = prize;
+  }
 }
 
 /*
@@ -186,4 +187,3 @@ if (prize === 12) {
     
 }
 */
-}
