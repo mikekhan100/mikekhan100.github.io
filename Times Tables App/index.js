@@ -7,8 +7,8 @@ var prize = 0;
 
 var timesBy1 = document.getElementById("input1").value;
 var answer1 = document.getElementById("answer1");
-  if (currentValue == 2) {
-    answer.textContent = "True";
+  if (timesBy1 == 2) {
+    answer1.textContent = "True";
     prize++;
     var result = document.getElementById("test");
     result.textContent = prize;
@@ -16,8 +16,8 @@ var answer1 = document.getElementById("answer1");
   
 var timesBy2 = document.getElementById("input2").value;
 var answer2 = document.getElementById("answer2");
-  if (currentValue == 4) {
-    answer.textContent = "True";
+  if (timesBy2 == 4) {
+    answer2.textContent = "True";
     prize++;
     var result = document.getElementById("test");
     result.textContent = prize;
