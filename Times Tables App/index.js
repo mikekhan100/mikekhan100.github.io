@@ -13,6 +13,15 @@ var answer = document.getElementById("answer1");
     var result = document.getElementById("test");
     result.textContent = prize;
   }
+  
+var currentValue = document.getElementById("input2").value;
+var answer = document.getElementById("answer2");
+  if (currentValue == 4) {
+    answer.textContent = "True";
+    prize++;
+    var result = document.getElementById("test");
+    result.textContent = prize;
+  }  
 }
 
 /*
