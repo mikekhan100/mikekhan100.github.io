@@ -5,6 +5,7 @@ var prize = 0;
 
 // If button is clicked, calculate whether the answer is correct and print it out
 
+function times1() { 
 var timesBy1 = document.getElementById("input1").value;
 var answer1 = document.getElementById("answer1");
   if (timesBy1 == 2) {
@@ -13,7 +14,10 @@ var answer1 = document.getElementById("answer1");
     var result = document.getElementById("test");
     result.textContent = prize;
   }
+}
+times1();
   
+function times2() {
 var timesBy2 = document.getElementById("input2").value;
 var answer2 = document.getElementById("answer2");
   if (timesBy2 == 4) {
@@ -21,8 +25,11 @@ var answer2 = document.getElementById("answer2");
     prize++;
     var result = document.getElementById("test");
     result.textContent = prize;
-  }  
+  }
 }
+times2();
+  
+} // Global function closing brace
 
 /*
 function calculate1() {
