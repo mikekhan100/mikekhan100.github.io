@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Times Tables App</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+    
+  <body>
+	<!-- NavBar -->  
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+      		</button>
+				<a href="#" class="navbar-brand">Times Tables</a>
+			</div>
+				<div class="collapse navbar-collapse" id="bs-nav-demo">
+					<ul class="nav navbar-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+		</div>
+	</nav>
+
+	<!-- Jumbotron -->
+	<div class="container">
+		<div class="jumbotron">
+    		<h1>Times Tables</h1>
+			<h2>2 x Times Tables</h2>
+		</div>
+    </div>
+		
+	<!-- Times Tables -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6">
+				<div>
+					2 x 1  = 
+					<input type="text" style="width:50px;" id="input1">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer1"></span>
+	  			</div>
+	
+				<div>
+					2 x 2  = 
+					<input type="text" style="width:50px;" id="input2">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer2"></span>
+				</div>
+	  			
+				<div>
+					2 x 3  = 
+					<input type="text" style="width:50px;" id="input3">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer3"></span>
+				</div>
+	  			
+	  			<div>
+					2 x 4  = 
+					<input type="text" style="width:50px;" id="input4">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer4"></span>
+				</div>
+	  			
+	  			<div>
+					2 x 5  = 
+					<input type="text" style="width:50px;" id="input5">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer5"></span>
+				</div>
+	  		
+				<div>
+					2 x 6  = 
+					<input type="text" style="width:50px;" id="input6">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer6"></span>
+	  			</div>
+	
+				<div>	
+					2 x 7  = 
+					<input type="text" style="width:50px;" id="input7">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer7"></span>
+		  		</div>
+				
+				<div>
+					2 x 8  = 
+					<input type="text" style="width:50px;" id="input8">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer8"></span>
+		  		</div>
+				
+				<div>
+					2 x 9  = 
+					<input type="text" style="width:50px;" id="input9">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer9"></span>
+		  		</div>
+				
+				<div>
+					2 x 10  = 
+					<input type="text" style="width:50px;" id="input10">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer10"></span>
+		  		</div>
+
+				<div>
+					2 x 11  = 
+					<input type="text" style="width:50px;" id="input11">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer11"></span>
+		  		</div>
+
+				<div>
+					2 x 12  = 
+					<input type="text" style="width:50px;" id="input12">
+					<button onclick="whole()">Check answer</button>
+					<span id="answer12"></span>
+				</div>
+	  		</div>
+		
+			
+			<div class="col-xs-6" id="test">
+				TEST
+			</div>
+		</div>
+	</div>
+		
+	
+
+		
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
