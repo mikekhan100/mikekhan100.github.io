@@ -163,7 +163,7 @@ times12();
 
 // Show image when all 12 answers are correct
   if (prize === 12) {
-    var result = document.getElementById("test");
+    var result = document.getElementById("img");
     var img = document.createElement('img');
     img.src = 'https://www.dropbox.com/s/hwnlpfv2r3cbkt2/2017-07-22%2018.35.07.jpg?dl=1';
     result.appendChild(img);
