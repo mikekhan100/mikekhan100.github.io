@@ -10,10 +10,12 @@ var timesBy1 = document.getElementById("input1").value;
 var answer1 = document.getElementById("answer1");
   if (timesBy1 == 2) {
     answer1.textContent = "Correct!";
+    answer1.style.color = "#00db71";
     prize++;
   }
   else {
     answer1.textContent = "Please try again";
+    answer1.style.color = "#f40430";
   }
 }
 times1();
