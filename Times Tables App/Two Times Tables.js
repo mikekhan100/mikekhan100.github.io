@@ -195,7 +195,6 @@ times12();
     text.textContent = "Well done Mary!!!";
     text.style.color = "#f90000";
     text.style.fontSize = "xx-large";
-    prize = 0;
   }
   
 } // Global function closing brace
