@@ -191,8 +191,9 @@ times12();
     var photo = document.createElement("img");
     photo.src = 'https://www.dropbox.com/s/hwnlpfv2r3cbkt2/2017-07-22%2018.35.07.jpg?dl=1';
     result.appendChild(photo);
-    result.textContent = "Well done Mary!!!";
-    result.style.color = "#f90000";
+    var text = document.createTextNode("Well done Mary!!!");
+    text.style.color = "#f90000";
+    result.appendChild(text);
   }
   
 } // Global function closing brace
