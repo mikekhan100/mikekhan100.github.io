@@ -191,12 +191,8 @@ times12();
     var photo = document.createElement("img");
     photo.src = 'https://www.dropbox.com/s/hwnlpfv2r3cbkt2/2017-07-22%2018.35.07.jpg?dl=1';
     result.appendChild(photo);
-    var text = document.getElementById("image");
-    var text = canvas.getContext("2d");
-    text.font = "30px Comic Sans MS";
-    text.fillStyle = "red";
-    ctx.textAlign = "center";
-    ctx.fillText("Well done Mary!!!", canvas.width/2, canvas.height/2); 
+    result.textContent = "Well done Mary!!!";
+    result.style.color = "#f90000";
   }
   
 } // Global function closing brace
