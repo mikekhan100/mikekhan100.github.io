@@ -189,7 +189,7 @@ times12();
   if (prize === 12) {
     var result = document.getElementById("image");
     var photo = document.createElement("img");
-    photo.src = 'mikekhan100.github.io/Images/2016-12-11 14.16.10 Adjusted.jpg';
+    photo.src = './Images/2016-12-11 14.16.10 Adjusted.jpg';
     result.appendChild(photo);
     var text = document.getElementById("message");
     text.textContent = "Well done Mary!!!";
