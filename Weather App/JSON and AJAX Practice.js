@@ -48,31 +48,31 @@ function renderBackground(data) {
 	id = data.weather[0].id;	
 
 	if (id >= 200 && id <= 232) {
-		document.body.style.backgroundImage = "url('Images/thunderstorm.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/thunderstorm.jpeg')";
 	}
 	else if (id >= 300 && id <= 321) {
-		document.body.style.backgroundImage = "url('Images/drizzle.jpg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/drizzle.jpg')";
 	}
 	else if (id >= 500 && id <= 531) {
-		document.body.style.backgroundImage = "url('Images/rain.jpg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/rain.jpg')";
 	}
 	else if (id >= 600 && id <= 622) {
-		document.body.style.backgroundImage = "url('Images/snow.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/snow.jpeg')";
 	}
 	else if (id == 701) {
-		document.body.style.backgroundImage = "url('Images/mist.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/mist.jpeg')";
 	}
 	else if (id == 721) {
-		document.body.style.backgroundImage = "url('Images/haze.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/haze.jpeg')";
 	}
 	else if (id == 800) {
-		document.body.style.backgroundImage = "url('Images/clear.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/clear.jpeg')";
 	}
 	else if (id >= 801 && id <= 804) {
-		document.body.style.backgroundImage = "url('Images/clouds.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/clouds.jpeg')";
 	}
 	else 
-		document.body.style.backgroundImage = "url('Images/storm.jpeg')";
+		document.body.style.backgroundImage = "url('https://mikekhan100.github.io/Images/storm.jpeg')";
 	
 	
 }
