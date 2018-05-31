@@ -3,7 +3,8 @@ body {
 }
 
 a {
-     background-color: #37fcf8;
+     background-color: #FFAC8D;
      color: #000;
      padding: 1px;  
+     text-decoration: none;
 }
