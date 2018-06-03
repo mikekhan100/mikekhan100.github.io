@@ -1,10 +1,10 @@
 body {
-	background-color: rgba(11, 99, 150, 0.5);
+	background: rgba(11, 99, 150, 0.5);
 }
 
 a {
      font-size: 24px;
-     background-color: #FFAC8D;
+     background: #FFAC8D;
      color: #000;
      padding-bottom: 30px;   
      text-decoration: none;
