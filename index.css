@@ -1,3 +1,15 @@
+.parallax { 
+    background-image: url("https://mikekhan100.github.io/Images/code.jpeg");
+
+    /* Set a specific height */
+    height: 700px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 body {
 	background: rgba(11, 99, 150, 0.5);
 }
@@ -8,7 +20,7 @@ h1 {
 
 a {
      font-family: Verdana;
-     font-size: 24px;
+     font-size: 36px;
      padding-bottom: 10px;   
      text-decoration: none;
 }
