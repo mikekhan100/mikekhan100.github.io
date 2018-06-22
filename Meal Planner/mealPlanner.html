@@ -2,21 +2,43 @@
 <html>
 <head>
 	<title>Meal Planner</title>
+	<link rel="stylesheet" type="text/css" href="mealPlanner.css">
 </head>
 <body>
+	<div id="centre">
 	<h1>Meal Planner</h1>
-	<h4>Please choose which meal:</h4>
-	<select id="meal"> 
-  		<option value="breakfast">Breakfast</option> 
-  		<option value="lunch" selected>Lunch</option>
-  		<option value="dinner">Dinner</option>
-	</select>
-	<br>
-	<button id="makeChoice">Choose meal</button>
-	<br>
-	<div id="result"></div>
+	<form>
+		<h3>Please choose which meal:</h3>
+			<select id="meal"> 
+		  		<option value="breakfast">Breakfast</option> 
+		  		<option value="lunch" selected>Lunch</option>
+		  		<option value="dinner">Dinner</option>
+			</select>
 
+		<h3>Please choose which meat:</h3>
+		<select id="meat"> 
+	  		<option value="chicken" selected>Chicken</option> 
+	  		<option value="lamb">Lamb</option>
+	  		<option value="beef">Beef</option>
+	  		<option value="fish">Fish</option>
+	  		<option value="eggs">Eggs</option>
+	  		<option value="mince">Mince</option>
+	  		<option value="none">No meat (!)</option>
+		</select>
 
+		<h3>Please choose who the meal is for:</h3>
+			<div>
+    			<img id="picMB" src="../Images/Mary and Betty.jpg" alt="MandB">
+    			<img id="picCM" src="../Images/Chrissy and Michael.jpg" alt="CandM">
+    			<img id="picDM" src="../Images/Dad and Martin.jpg" alt="DandM">
+  			</div>
+	</form>
+	
+	<pre>
+		<div id="result"></div>
+	</pre>
+
+	</div>
 <script type="text/javascript" src="mealPlanner.js"></script>
 </body>
 </html>
