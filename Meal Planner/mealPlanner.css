@@ -8,7 +8,7 @@ img {
     border: 1px solid #ddd; /* Gray border */
     border-radius: 4px;  /* Rounded border */
     padding: 5px; /* Some padding */
-    width: 33%; /* Set a small width */
+    width: 20%; /* Set a small width */
     margin: 10px;
 }
 
@@ -19,7 +19,7 @@ img:hover {
 
 #centre {
 	margin: auto;
-	width: 100%;
+	width: 50%;
 }
 
 #meal {
