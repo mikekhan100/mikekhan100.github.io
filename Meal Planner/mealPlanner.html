@@ -10,22 +10,20 @@
 	<h1>Meal Planner</h1>
 	<form>
 		<h3>Please choose which meal:</h3>
-			<select id="meal"> 
+			<select id="meal" onchange="populate(this.id, 'meat')"> 
+		  		<option value=""></option> 
 		  		<option value="breakfast">Breakfast</option> 
-		  		<option value="lunch" selected>Lunch</option>
+		  		<option value="lunch">Lunch</option>
 		  		<option value="dinner">Dinner</option>
 			</select>
+	</form>
 
+	<form>
 		<h3>Please choose which meat:</h3>
 		<select id="meat"> 
-	  		<option value="chicken" selected>Chicken</option> 
-	  		<option value="lamb">Lamb</option>
-	  		<option value="beef">Beef</option>
-	  		<option value="fish">Fish</option>
-	  		<option value="eggs">Eggs</option>
-	  		<option value="mince">Mince</option>
-	  		<option value="none">No meat (!)</option>
+	  		
 		</select>
+	</form>
 
 		<h3>Please choose who the meal is for:</h3>
 			<div>
@@ -33,12 +31,11 @@
     			<img id="picCM" src="../Images/Chrissy and Michael.jpg" alt="CandM">
     			<img id="picDM" src="../Images/Dad and Martin.jpg" alt="DandM">
   			</div>
-	</form>
-	
-	<pre>
-		<div id="result"></div>
-	</pre>
-
+		
+		<pre>
+			<div id="result"></div>
+		</pre>
+		
 	</div>
 <script type="text/javascript" src="mealPlanner.js"></script>
 </body>
