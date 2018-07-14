@@ -1,150 +1,563 @@
-var CandMBreakfast = [
-	'Cereal',
-	'Muesli',
-	'Spinach Omelette',
-	'Berries and Yoghurt',
-	'Banana and Yoghurt'
-];
+//Function to populate the second select form
+function populate(meal, meat) {
+	var meal = document.getElementById("meal");
+	var meat = document.getElementById("meat");
+	meat.innerHTML = "";
 
-var MandBBreakfast = [
-	'Cereal',
-	'Muesli',
-	'Bacon Sandwich',
-	'Berries and Yoghurt'
-];
+	if(meal.value === "breakfast") {
+		var optionArray = ["|", "eggs|Eggs", "noMeat|No Meat", "allChoices|All Choices"];
+	}
+	else if(meal.value === "lunch") {
+		var optionArray = ["|", "chicken|Chicken", "eggs|Eggs", "fish|Fish", "noMeat|No Meat", "allChoices|All Choices"];
+	}
+	else if(meal.value === "dinner") {
+		var optionArray = ["|", "chicken|Chicken", "lamb|Lamb", "beef|Beef", "eggs|Eggs", "fish|Fish", "mince|Mince", "noMeat|No Meat", "allChoices|All Choices"];
+	}
 
-var DandMBreakfast = [
-	'Cereal'
-];
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		meat.options.add(newOption);
+	}
+}
 
-var CandMLunch = [
-	'Roast Vegetable Salad',
-	'New Potato and Anchovy Salad',
-	'Spinach Omelette',
-	'Houmous and Dips',
-	'Pho!'
-];
+//Meal objects
+var MandBBreakfast = {
+	eggs: ["Scrambled Egg", "Omelette", "Hard Boiled Egg"],
+	noMeat: ["Cereal", "Muesli", "Berries and Yoghurt"],
+	allChoices: ["Cereal", "Muesli", "Berries and Yoghurt", "Scrambled Egg", "Omelette", "Hard Boiled Egg"]
+}
 
-var MandBLunch = [
-	'Chicken Sandwich',
-	'Chicken and Sweetcorn Soup',
-	'Pizza',
-	'Beans on Toast',
-	'Omelette',
-	'Pho!'
-];
+var CandMBreakfast = {
+	eggs: ["Scrambled Egg", "Spinach Omelette"],
+	noMeat: ["Cereal", "Muesli", "Berries and Yoghurt"],
+	allChoices: ["Cereal", "Muesli", "Berries and Yoghurt", "Scrambled Egg", "Spinach Omelette"]
+}
 
-var DandMLunch = [
-	'Soup'
-];
+var DandMBreakfast = {
+	eggs: ["Please choose 'No Meat' or 'All Choices'"],
+	noMeat: ["Cereal"],
+	allChoices: ["Cereal"]
+}
 
-var CandMDinner = [
-	'Curry',
-	'Spaghetti Bolognese',
-	'Roast Dinner',
-	'BBQ',
-	'Fish and Chips',
-	'Hot Halloween Beanpot',
-	'Vietnamese Salad',
-	'Stir Fry'
-];
+var MandBLunch = {
+	chicken: ["Chicken and Sweetcorn Soup"],
+	eggs: ["Omelette"],
+	fish: ["Fish Fingers"],
+	noMeat: ["Pizza", "Beans on Toast"],
+	allChoices: ["Chicken and Sweetcorn Soup", "Omelette", "Fish Fingers", "Pizza", "Beans on Toast"]
+}
 
-var MandBDinner = [
-	'Curry',
-	'Spaghetti Bolognese',
-	'Roast Dinner',
-	'BBQ',
-	'Fish and Chips',
-	'Hot Halloween Beanpot',
-	'Vietnamese Salad',
-	'Stir Fry'
-];
+var CandMLunch = {
+	chicken: ["Please choose 'Eggs', 'Fish', 'No Meat' or 'All Choices'"],
+	eggs: ["Spinach Omelette"],
+	fish: ["New Potato and Anchovy Salad"],
+	noMeat: ["Roast Vegetable Salad", "Houmous and Dips", "Pear and Walnut Salad", "Strawberry and Feta Salad"],
+	allChoices: ["Spinach Omelette", "New Potato and Anchovy Salad", "Roast Vegetable Salad", "Houmous and Dips", "Pear and Walnut Salad", "Strawberry and Feta Salad"]
+}
 
-var DandMDinner = [
-	'Curry',
-	'Roast Dinner',
-	'BBQ',
-	'Fish and Chips',
-	'Hot Halloween Beanpot',
-	'Eggs, Beans and Chips',
-	'Ready Meal'
-];
+var DandMLunch = {
+	chicken: ["Please choose 'No Meat' or 'All Choices'"],
+	eggs: ["Please choose 'No Meat' or 'All Choices'"],
+	fish: ["Please choose 'No Meat' or 'All Choices'"],
+	noMeat: ["Soup and Sandwich"],
+	allChoices: ["Soup and Sandwich"]
+}
 
-var mealIndex = document.getElementById("meal").selectedIndex;
-var meatIndex = document.getElementById("meat").selectedIndex;
+var MandBDinner = {
+	chicken: ["Chicken Korma", "Roast Dinner", "Stir Fry"],
+	lamb: ["Roast Dinner"],
+	beef: ["Roast Dinner"],
+	eggs: ["Omelette"],
+	fish: ["Fish Fingers", "Fish and Chips"],
+	mince: ["Spaghetti Bolognese", "Lasagne"],
+	noMeat: ["Pizza", "Beans on Toast"],
+	allChoices: ["Chicken Korma", "Roast Dinner", "Stir Fry", "Omelette", "Fish Fingers", "Fish and Chips", "Spaghetti Bolognese", "Lasagne", "Pizza", "Beans on Toast"]
+}
+
+var CandMDinner = {
+	chicken: ["Curry", "Roast Dinner", "Stir Fry", "Vietnamese Salad"],
+	lamb: ["Roast Dinner", "Curry"],
+	beef: ["Roast Dinner"],
+	eggs: ["Please choose 'Chicken', 'Lamb', 'Beef', 'Fish', 'Mince' or 'All Choices'"],
+	fish: ["Salmon and Coriander Rice", "Fish and Chips"],
+	mince: ["Spaghetti Bolognese", "Hot Halloween Beanpot"],
+	noMeat: ["Please choose 'Chicken', 'Lamb', 'Beef', 'Fish', 'Mince' or 'All Choices'"],
+	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Vietnamese Salad", "Salmon and Coriander Rice", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot"]
+}
+
+var DandMDinner = {
+	chicken: ["Curry", "Roast Dinner", "Stir Fry"],
+	lamb: ["Roast Dinner", "Curry"],
+	beef: ["Roast Dinner"],
+	eggs: ["Eggs, Beans and Chips"],
+	fish: ["Fish Cakes and Chips", "Fish and Chips"],
+	mince: ["Spaghetti Bolognese", "Hot Halloween Beanpot"],
+	noMeat: ["Saag Aloo", "Chana Masala", "Vegetable Ricotta"],
+	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Eggs, Beans and Chips", "Fish Cakes and Chips", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot", "Saag Aloo", "Chana Masala", "Vegetable Ricotta"]
+}
+
+//Selectors
+var meal = document.getElementById("meal");
+var meat = document.getElementById("meat");
+
+var buttonMB = document.getElementById("picMB");
+var buttonCM = document.getElementById("picCM");
+var buttonDM = document.getElementById("picDM");
+
 var result = document.getElementById("result");
-var text = '';	//used to build up the result
-var picMB = document.getElementById("picMB");
-var picCM = document.getElementById("picCM");
-var picDM = document.getElementById("picDM");
 
+//EventListener for the MandB button
+buttonMB.addEventListener('click', function() {
+	result.innerHTML = "";	//Clear any previous text
+	//Breakfast choices
+	if(meal.value === "breakfast" && meat.value == "eggs") {
+		for(var element in MandBBreakfast.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBBreakfast.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
 
-picMB.addEventListener('click', function(e) {
-	
-    if (mealIndex === 0 && meatIndex >= 0) {
-		MandBBreakfast.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+	else if(meal.value === "breakfast" && meat.value == "noMeat") {
+		for(var element in MandBBreakfast.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBBreakfast.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	else if (mealIndex === 1 && meatIndex >= 0) {
-		MandBLunch.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+
+	else if(meal.value === "breakfast" && meat.value == "allChoices") {
+		for(var element in MandBBreakfast.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBBreakfast.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	else {
-		MandBDinner.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+
+	//Lunch choices
+	else if(meal.value === "lunch" && meat.value == "chicken") {
+		for(var element in MandBLunch.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBLunch.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	e.preventDefault();
+
+	else if(meal.value === "lunch" && meat.value == "eggs") {
+		for(var element in MandBLunch.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBLunch.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "fish") {
+		for(var element in MandBLunch.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBLunch.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "noMeat") {
+		for(var element in MandBLunch.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBLunch.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "allChoices") {
+		for(var element in MandBLunch.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBLunch.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	//Dinner choices
+	else if(meal.value === "dinner" && meat.value == "chicken") {
+		for(var element in MandBDinner.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "lamb") {
+		for(var element in MandBDinner.lamb) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.lamb[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "beef") {
+		for(var element in MandBDinner.beef) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.beef[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "eggs") {
+		for(var element in MandBDinner.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "fish") {
+		for(var element in MandBDinner.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "mince") {
+		for(var element in MandBDinner.mince) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.mince[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "noMeat") {
+		for(var element in MandBDinner.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "allChoices") {
+		for(var element in MandBDinner.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(MandBDinner.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
 });
 
-picCM.addEventListener('click', function(e) {
-	
-    if (mealIndex === 0 && meatIndex >= 0) {
-		CandMBreakfast.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+//EventListener for the CandM button
+buttonCM.addEventListener('click', function() {
+	result.innerHTML = "";	//Clear any previous text
+	//Breakfast choices
+	if(meal.value === "breakfast" && meat.value == "eggs") {
+		for(var element in CandMBreakfast.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMBreakfast.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	else if (mealIndex === 1 && meatIndex >= 0) {
-		CandMLunch.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+
+	else if(meal.value === "breakfast" && meat.value == "noMeat") {
+		for(var element in CandMBreakfast.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMBreakfast.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	else {
-		CandMDinner.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+
+	else if(meal.value === "breakfast" && meat.value == "allChoices") {
+		for(var element in CandMBreakfast.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMBreakfast.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	e.preventDefault();
+
+	//Lunch choices
+	else if(meal.value === "lunch" && meat.value == "chicken") {
+		for(var element in CandMLunch.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMLunch.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "eggs") {
+		for(var element in CandMLunch.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMLunch.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "fish") {
+		for(var element in CandMLunch.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMLunch.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "noMeat") {
+		for(var element in CandMLunch.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMLunch.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "allChoices") {
+		for(var element in CandMLunch.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMLunch.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	//Dinner choices
+	else if(meal.value === "dinner" && meat.value == "chicken") {
+		for(var element in CandMDinner.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "lamb") {
+		for(var element in CandMDinner.lamb) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.lamb[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "beef") {
+		for(var element in CandMDinner.beef) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.beef[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "eggs") {
+		for(var element in CandMDinner.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "fish") {
+		for(var element in CandMDinner.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "mince") {
+		for(var element in CandMDinner.mince) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.mince[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "noMeat") {
+		for(var element in CandMDinner.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "allChoices") {
+		for(var element in CandMDinner.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(CandMDinner.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
 });
 
-picDM.addEventListener('click', function(e) {
-	
-    if (mealIndex === 0 && meatIndex >= 0) {
-		DandMBreakfast.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
+//EventListener for the DandM button
+buttonDM.addEventListener('click', function() {
+	result.innerHTML = "";	//Clear any previous text
+	//Breakfast choices
+	if(meal.value === "breakfast" && meat.value == "eggs") {
+		for(var element in DandMBreakfast.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMBreakfast.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
 	}
-	else if (mealIndex === 1 && meatIndex >= 0) {
-		DandMLunch.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
-	}
-	else {
-		DandMDinner.forEach(function(e) {
-			text += e + "\n";
-		});
-		result.textContent = text;
-	}
-	e.preventDefault();
-});
 
+	else if(meal.value === "breakfast" && meat.value == "noMeat") {
+		for(var element in DandMBreakfast.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMBreakfast.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "breakfast" && meat.value == "allChoices") {
+		for(var element in DandMBreakfast.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMBreakfast.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	//Lunch choices
+	else if(meal.value === "lunch" && meat.value == "chicken") {
+		for(var element in DandMLunch.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMLunch.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "eggs") {
+		for(var element in DandMLunch.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMLunch.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "fish") {
+		for(var element in DandMLunch.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMLunch.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "noMeat") {
+		for(var element in DandMLunch.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMLunch.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "lunch" && meat.value == "allChoices") {
+		for(var element in DandMLunch.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMLunch.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	//Dinner choices
+	else if(meal.value === "dinner" && meat.value == "chicken") {
+		for(var element in DandMDinner.chicken) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.chicken[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "lamb") {
+		for(var element in DandMDinner.lamb) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.lamb[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "beef") {
+		for(var element in DandMDinner.beef) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.beef[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "eggs") {
+		for(var element in DandMDinner.eggs) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.eggs[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "fish") {
+		for(var element in DandMDinner.fish) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.fish[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "mince") {
+		for(var element in DandMDinner.mince) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.mince[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "noMeat") {
+		for(var element in DandMDinner.noMeat) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.noMeat[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+
+	else if(meal.value === "dinner" && meat.value == "allChoices") {
+		for(var element in DandMDinner.allChoices) {
+			var node = document.createElement("LI");
+			var textNode = document.createTextNode(DandMDinner.allChoices[element]);
+			node.appendChild(textNode);
+			result.appendChild(node);
+		}
+	}
+});
