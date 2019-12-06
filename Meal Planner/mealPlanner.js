@@ -73,8 +73,8 @@ var MandBDinner = {
 	eggs: ["Omelette"],
 	fish: ["Fish Fingers", "Fish and Chips"],
 	mince: ["Spaghetti Bolognese", "Lasagne"],
-	noMeat: ["Pizza", "Beans on Toast"],
-	allChoices: ["Chicken Korma", "Roast Dinner", "Stir Fry", "Omelette", "Fish Fingers", "Fish and Chips", "Spaghetti Bolognese", "Lasagne", "Pizza", "Beans on Toast"]
+	noMeat: ["Pizza", "Beans on Toast", "Macaroni Cheese"],
+	allChoices: ["Chicken Korma", "Roast Dinner", "Stir Fry", "Omelette", "Fish Fingers", "Fish and Chips", "Spaghetti Bolognese", "Lasagne", "Pizza", "Beans on Toast", "Macaroni Cheese"]
 }
 
 var CandMDinner = {
@@ -84,8 +84,8 @@ var CandMDinner = {
 	eggs: ["Please choose 'Chicken', 'Lamb', 'Beef', 'Fish', 'Mince' or 'All Choices'"],
 	fish: ["Salmon and Coriander Rice", "Fish and Chips"],
 	mince: ["Spaghetti Bolognese", "Hot Halloween Beanpot"],
-	noMeat: ["Please choose 'Chicken', 'Lamb', 'Beef', 'Fish', 'Mince' or 'All Choices'"],
-	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Vietnamese Salad", "Salmon and Coriander Rice", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot"]
+	noMeat: ["Macaroni Cheese"],
+	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Vietnamese Salad", "Salmon and Coriander Rice", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot", "Macaroni Cheese"]
 }
 
 var DandMDinner = {
@@ -95,8 +95,8 @@ var DandMDinner = {
 	eggs: ["Eggs, Beans and Chips"],
 	fish: ["Fish Cakes and Chips", "Fish and Chips"],
 	mince: ["Spaghetti Bolognese", "Hot Halloween Beanpot"],
-	noMeat: ["Saag Aloo", "Chana Masala", "Vegetable Ricotta"],
-	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Eggs, Beans and Chips", "Fish Cakes and Chips", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot", "Saag Aloo", "Chana Masala", "Vegetable Ricotta"]
+	noMeat: ["Saag Aloo", "Chana Masala", "Vegetable Ricotta", "Macaroni Cheese"],
+	allChoices: ["Curry", "Roast Dinner", "Stir Fry", "Eggs, Beans and Chips", "Fish Cakes and Chips", "Fish and Chips", "Spaghetti Bolognese", "Hot Halloween Beanpot", "Saag Aloo", "Chana Masala", "Vegetable Ricotta", "Macaroni Cheese"]
 }
 
 //Selectors
