@@ -1,3 +1,7 @@
+img {
+  object-fit: contain;
+}
+
 button {
   position: absolute;
   left: 100px;
