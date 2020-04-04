@@ -72,7 +72,7 @@ body {
 .box-a {
     grid-area: box-a; /* This tells the 'grid-template-area' what 'box' refers to (i.e. 'box-a', etc) */
     min-height: 400px;
-    background: url(Images/Pea\ and\ Sun\ Dried\ Tomato\ Risotto.jpg);
+    background: url(Images/Pea%20and%20Sun%20Dried%20Tomato%20Risotto.jpg);
     background-size: cover;
     background-position: center;
     padding: 3rem;
