@@ -1,10 +1,144 @@
-img {
-  object-fit: contain;
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-button {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 10;
-} 
+html {
+    box-sizing: border-box; /* Prevents padding from affecting the width of the element */
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background: #ccc;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.btn {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px; /* Automatically assigns spacing between elements */
+}
+
+/* Navigation */
+.main-nav ul {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: repeat(2, 0.1fr);    /* 'fr' set below 1.0 allows elements to be closer together */
+}
+
+.main-nav a {
+    background: var(--primary);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--dark);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-nav a:hover {
+    background: var(--dark);
+    color: var(--light);
+}
+
+/* Boxes Section */
+/* These properties are applied to the parent class to allow the child classes to be arranged in a grid */
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:    /* This provides the layout for the child classes */
+        'box-a box-b'
+        'box-c box-d';
+}
+
+/* box-a */
+/* Ensure that the content of each box is similar so that the boxes are the same size */
+.box-a {
+    grid-area: box-a; /* This tells the 'grid-template-area' what 'box' refers to (i.e. 'box-a', etc) */
+    min-height: 400px;
+    background: url(Images/Pea\ and\ Sun\ Dried\ Tomato\ Risotto.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;  /* Used to choose the position of the button over the background */
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    box-shadow: var(--shadow);
+}
+
+/* box-b */
+.box-b {
+    grid-area: box-b; /* This tells the 'grid-template-area' what 'box' refers to (i.e. the class '.box') */
+    min-height: 400px;
+    background: url('#808080');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    box-shadow: var(--shadow);
+}
+
+/* box-c */
+.box-c {
+    grid-area: box-c; /* This tells the 'grid-template-area' what 'box' refers to (i.e. the class '.box') */
+    min-height: 400px;
+    background: url('#808080');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    box-shadow: var(--shadow);
+}
+
+/* box-d */
+.box-d {
+    grid-area: box-d; /* This tells the 'grid-template-area' what 'box' refers to (i.e. the class '.box') */
+    min-height: 400px;
+    background: url('#808080');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    box-shadow: var(--shadow);
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+    .boxes {
+        grid-template-areas:    
+            'box-a'
+            'box-b'
+            'box-c'
+            'box-d';
+    }
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+}
