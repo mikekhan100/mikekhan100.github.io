@@ -26,6 +26,10 @@ function getID(e){
 //generate recipe buttons
 function showButtons(){
     var output = '';
+    if(ID === 'all') {
+        for(var i in mealData) {
+            
+        }    
     for(var i in mealData[ID]){ //mealData[ID] selects one of the meal object arrays
         output += 
         `<div> ${mealData[ID][i]} <button id="${mealData[ID][i]}"> See Scanned Recipe </button> <button> <a href="https://www.bbc.co.uk/food/search?q=${mealData[ID][i]}"> See BBC Recipes </a> </button> </div> <br>`;
