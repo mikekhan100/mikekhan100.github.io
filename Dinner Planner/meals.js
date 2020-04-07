@@ -27,7 +27,7 @@ function getID(e){
 function showButtons(){
     var output = '';
     if(ID === 'all') {
-        console.log(Object.values(mealData));
+        console.log(mealData[0]);
     }
     for(var i in mealData[ID]){ //mealData[ID] selects one of the meal object arrays
         output += 
