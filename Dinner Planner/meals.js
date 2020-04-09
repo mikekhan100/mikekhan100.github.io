@@ -26,8 +26,14 @@ function getID(e){
 //generate recipe buttons
 function showButtons(){
     var output = '';
-    if(ID === 'all') {
-        console.log(mealData[0]);
+    if(ID === 'all') {  // Allows all meals to be shown
+        var arr = Object.values(mealData);
+        let flat = [].concat.apply([], arr);    // 'Flattens' a nested array structure
+        for(var i in flat) {
+            output += 
+            `<div> ${flat[i]} <button id="${flat[i]}"> See Scanned Recipe </button> <button> <a href="https://www.bbc.co.uk/food/search?q=${flat[i]}"> See BBC Recipes </a> </button> </div> <br>`;
+            document.querySelector("#result").innerHTML = output;   //produces the buttons based on the meals
+        }
     }
     for(var i in mealData[ID]){ //mealData[ID] selects one of the meal object arrays
         output += 
