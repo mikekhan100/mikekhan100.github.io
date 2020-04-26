@@ -31,15 +31,18 @@ function showButtons(){
         let flat = [].concat.apply([], arr);    // 'Flattens' a nested array structure
         for(var i in flat) {
             output += 
-            `<div> ${flat[i]} <button id="${flat[i]}"> See Scanned Recipe </button> <button> <a href="https://www.bbc.co.uk/food/search?q=${flat[i]}"> See BBC Recipes </a> </button> </div> <br>`;
+            `<ul> <li> <div class="card"> <h3 class="card-title">${flat[i]}</h3> <img src="Recipes/${flat[i]}.jpg"> <div class="card-content">  <button id="${flat[i]}" class="btn"> Scanned Recipe </button> <button class="btn card-btn"> <a href="https://www.bbc.co.uk/food/search?q=${flat[i]}"> BBC Recipes </a> </button> </div> </div> </li> </ul>`;
             document.querySelector("#result").innerHTML = output;   //produces the buttons based on the meals
         }
     }
     for(var i in mealData[ID]){ //mealData[ID] selects one of the meal object arrays
         output += 
-        `<div> ${mealData[ID][i]} <button id="${mealData[ID][i]}"> See Scanned Recipe </button> <button> <a href="https://www.bbc.co.uk/food/search?q=${mealData[ID][i]}"> See BBC Recipes </a> </button> </div> <br>`;
+        `<ul> <li> <div class="card"> <h3 class="card-title">${mealData[ID][i]}</h3> <img src="Recipes/${mealData[ID][i]}.jpg"> <div class="card-content">  <button id="${mealData[ID][i]}" class="btn"> Scanned Recipe </button> <button class="btn card-btn"> <a href="https://www.bbc.co.uk/food/search?q=${mealData[ID][i]}"> BBC Recipes </a> </button> </div> </div> </li> </ul>`;
         document.querySelector("#result").innerHTML = output;   //produces the buttons based on the meals
     }
+    
+    document.querySelector("#result").scrollIntoView(true); //scrolls screen down to recipe list
+    
     //recreate the result element, which was replaced by 'output' above
     //this allows the category buttons to produce meal lists again
     var result = document.createElement("div");
