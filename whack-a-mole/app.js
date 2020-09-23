@@ -23,7 +23,7 @@ function pickRandomHole(holes) {
 }
 
 function popOut() {
-  const time = Math.random() * 800;
+  const time = Math.random() * 1200;
   const hole = pickRandomHole(holes); //select random hole from the 6 available
   hole.classList.add("up"); //add the 'up' class to the selected hole. Results in the 'top' value in the .mole class being changed from 100% to 0 (i.e. the mole appears)
   setTimeout(function () {
