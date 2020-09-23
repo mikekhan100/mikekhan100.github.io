@@ -1,62 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Web Apps</title>
-</head>
-<body>
-    <div class="container">
-        <!-- Navigation -->
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-        <!-- Top Container -->
-        <section class="top-container">
-            <header class="title">
-                <h1>Web Apps</h1>
-            </header>
-        </section>
+  <body>
+    <div class="wrapper">
+      <div class="quizScore">Whack-a-<strike>Mole</strike> Mark</div>
+      <div class="score">0</div>
+      <div class="countdown"></div>
+      <button class="startButton">Start!</button>
 
-        <!-- Boxes Section -->
-        <section class="boxes">
-            <div class="box-a">
-                <a href="Dinner%20Planner/meals.html" class="btn">
-                    <h3>Recipe Selection</h3>
-                    <p>Select scanned recipes based on categories</p>
-                </a>
-            </div>
-            <div class="box-b">
-                <a href="" class="btn">
-                    <h3>Another App</h3>
-                    <p>Does different stuff depending on the app</p>
-                </a>
-            </div>
-            <div class="box-c">
-                <a href="" class="btn">
-                    <h3>Another App</h3>
-                    <p>Does different stuff depending on the app</p>
-                </a>
-            </div>
-            <div class="box-d">
-                <a href="" class="btn">
-                    <h3>Another App</h3>
-                    <p>Does different stuff depending on the app</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-        <p>Michael Khan 2020</p>
-        </footer>
-
+      <div class="game">
+        <div class="hole hole1">
+          <div class="mole small"></div>
+        </div>
+        <div class="hole hole2">
+          <div class="mole small"></div>
+        </div>
+        <div class="hole hole3">
+          <div class="mole small"></div>
+        </div>
+        <div class="hole hole4">
+          <div class="mole large"></div>
+        </div>
+        <div class="hole hole5">
+          <div class="mole large"></div>
+        </div>
+        <div class="hole hole6">
+          <div class="mole large"></div>
+        </div>
+      </div>
     </div>
-    <!-- Container ends -->
-</body>
+
+    <script src="app.js"></script>
+  </body>
 </html>
