@@ -65,11 +65,20 @@ function startGame() {
         case score >= 30:
           quizResult = 3;
           break;
+        case score >= 25:
+          quizResult = 2.5;
+          break;
         case score >= 20:
           quizResult = 2;
           break;
+        case score >= 15:
+          quizResult = 1.5;
+          break;
         case score >= 10:
           quizResult = 1;
+          break;
+        case score >= 5:
+          quizResult = 0.5;
           break;
         case score >= 0:
           quizResult = 0;
