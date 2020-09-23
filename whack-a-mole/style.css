@@ -23,6 +23,7 @@ body {
 }
 
 .quizScore {
+  text-shadow: 0px 0px 9px #f50a29, 0px 0px 15px #e84200, 0px 0px 5px #f50a51;
   font-size: 50px;
   color: #010124;
   position: absolute;
