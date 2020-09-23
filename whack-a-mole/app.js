@@ -85,6 +85,8 @@ function startGame() {
       }
       if (quizResult === 1) {
         quizScore.textContent = `Congratulations, you scored ${quizResult} quiz point!`;
+      } else if (quizResult === 0) {
+        quizScore.textContent = `Commiserations, you scored ${quizResult} quiz points - Mark is annoying isn't he!!!!`;
       } else {
         quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points!`;
       }
