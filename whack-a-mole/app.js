@@ -64,32 +64,33 @@ function startGame() {
       switch (true) {
         case score >= 30:
           quizResult = 3;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points - you really enjoyed hitting Mark!`;
           break;
         case score >= 25:
           quizResult = 2.5;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points - you gave Mark a good hiding!`;
           break;
         case score >= 20:
           quizResult = 2;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points - well done on giving Mark a beating!`;
           break;
         case score >= 15:
           quizResult = 1.5;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points - don't you feel better for whacking Mark!`;
           break;
         case score >= 10:
           quizResult = 1;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz point - start each day by hitting Mark a few times!`;
           break;
         case score >= 5:
           quizResult = 0.5;
+          quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points - you could have hit Mark a few more times!`;
           break;
         case score >= 0:
           quizResult = 0;
+          quizScore.textContent = `Commiserations, you scored ${quizResult} quiz points - you definitely need to hit Mark more often!`;
       }
-      if (quizResult === 1) {
-        quizScore.textContent = `Congratulations, you scored ${quizResult} quiz point!`;
-      } else if (quizResult === 0) {
-        quizScore.textContent = `Commiserations, you scored ${quizResult} quiz points - Mark is annoying isn't he!!!!`;
-      } else {
-        quizScore.textContent = `Congratulations, you scored ${quizResult} quiz points!`;
-      }
+      
     }
   }, 1000);
 }
