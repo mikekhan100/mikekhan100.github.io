@@ -61,11 +61,11 @@ function animate() {
 }
 animate(); //having declared animate function, it needs to be called here
 
-window.addEventListener("keydown", function (e) {
+window.addEventListener("onkeydown", function (e) {
   if (e.code === "Space") spacePressed = true;
 });
 
-window.addEventListener("keyup", function (e) {
+window.addEventListener("onkeyup", function (e) {
   if (e.code === "Space") spacePressed = false;
   bird.frameX = 0;
 });
