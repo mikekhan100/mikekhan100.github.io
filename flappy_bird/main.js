@@ -61,12 +61,12 @@ function animate() {
 }
 animate(); //having declared animate function, it needs to be called here
 
-window.addEventListener("onkeydown", function (e) {
-  if (e.code === "Space") spacePressed = true;
+document.addEventListener("keydown", function (e) {
+  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ') spacePressed = true;
 });
 
-window.addEventListener("onkeyup", function (e) {
-  if (e.code === "Space") spacePressed = false;
+document.addEventListener("keyup", function (e) {
+  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ') spacePressed = false;
   bird.frameX = 0;
 });
 
