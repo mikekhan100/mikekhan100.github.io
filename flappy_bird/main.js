@@ -49,9 +49,14 @@ function animate() {
   bird.update();
   bird.draw();
   ctx.fillStyle = gradient;
-  ctx.font = "90px Georgia";
-  ctx.strokeText(score, 700, 70);
-  ctx.fillText(score, 700, 70);
+  ctx.font = '90px Georgia';
+  if (score < 100) {
+    ctx.strokeText(score, 700, 70);
+    ctx.fillText(score, 700, 70);
+  } else if (score >= 100) {
+    ctx.strokeText(score, 650, 70);
+    ctx.fillText(score, 650, 70);
+  }
   handleCollisions();
   if (handleCollisions()) return;
   requestAnimationFrame(animate); //recursive animation loop
@@ -61,12 +66,16 @@ function animate() {
 }
 animate(); //having declared animate function, it needs to be called here
 
+document.onload = function () {
+  canvas.focus();
+};
+
 document.addEventListener("keydown", function (e) {
-  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ') spacePressed = true;
+  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ' || e.code === 'Space') spacePressed = true;
 });
 
 document.addEventListener("keyup", function (e) {
-  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ') spacePressed = false;
+  if (e.charCode === ' ' || e.key === ' ' || e.char === ' ' || e.code === 'Space') spacePressed = false;
   bird.frameX = 0;
 });
 
@@ -92,22 +101,22 @@ function handleCollisions() {
 function endGame() {
   let quizResult = 0;
   switch (true) {
-    case score >= 60:
+    case score >= 30:
       quizResult = 3;
       break;
-    case score >= 50:
+    case score >= 25:
       quizResult = 2.5;
       break;
-    case score >= 40:
+    case score >= 20:
       quizResult = 2;
       break;
-    case score >= 30:
+    case score >= 15:
       quizResult = 1.5;
       break;
-    case score >= 20:
+    case score >= 10:
       quizResult = 1;
       break;
-    case score >= 10:
+    case score >= 5:
       quizResult = 0.5;
       break;
     case score >= 0:
